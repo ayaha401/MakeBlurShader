@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MenuUI : MonoBehaviour
 {
-    [SerializeField] private SettingBlurPower _settingBlurPower = null;
+    [SerializeField] private MenuButton _menuButton = null;
+    [SerializeField] private GameObject _blurImageObj = null;
 
     void Start()
     {
@@ -13,6 +14,8 @@ public class MenuUI : MonoBehaviour
 
     public void CloseUI()
     {
+        _menuButton.OpenUI();
+        _blurImageObj.SetActive(false);
         this.gameObject.SetActive(false);
     }
 

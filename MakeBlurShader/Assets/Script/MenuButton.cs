@@ -15,13 +15,13 @@ public class MenuButton : MonoBehaviour
     public void OpenMenuUI()
     {
         _menuUI.OpenUI();
+        _blurImageObj.SetActive(true);
         CloseUI();
     }
 
     public void OpenUI()
     {
         this.gameObject.SetActive(true);
-        _blurImageObj.SetActive(true);
     }
 
     public void CloseUI()
